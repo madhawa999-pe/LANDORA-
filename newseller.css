@@ -1,0 +1,302 @@
+:root {
+    --primary-color: #245E55;      
+    --primary-light: #6FAF9F;      
+    --secondary-color: #6FAF9F;    
+    --accent-color: #D8B45A;       
+    --danger-color: #E53935;      
+
+    --bg-color: #FFFFFF;           
+    --card-bg: #F5F7F6;            
+
+    --text-light: #1F2D2A;        
+    --text-muted: #555555;
+    --border-color: #d0d0d0;
+
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.07);
+
+    --radius: 14px;
+}
+
+/* Global Styles */
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg-color);
+    margin: 0;
+    padding: 20px 50px;
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+h2, h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Back Button */
+.back-button {
+    margin-bottom: 15px;
+}
+
+.back-button button {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.back-button button:hover {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+/* Topbar */
+.topbar {
+    background: var(--card-bg);
+    padding: 18px 28px;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.topbar h2 {
+    font-size: 28px;
+    color: var(--highlight-color);
+}
+
+/* Total Properties Info */
+.topbar-info {
+    background: #d9e6e3;
+    color: var(--secondary-color);
+    padding: 8px 18px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.topbar-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); 
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Profile Section */
+.profile {
+    position: relative;
+}
+
+.profile img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown */
+.profile-menu {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 260px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    display: none;
+    padding: 20px;
+    box-shadow: var(--shadow-soft);
+    animation: dropdownFade 0.25s ease-out;
+}
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-menu input,
+.profile-menu button {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    color: var(--text-light);
+    font-size: 15px;
+}
+
+.profile-menu button {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-menu button:hover {
+    background: var(--primary-light);
+}
+
+/* Intro Section */
+.dashboard-intro {
+    padding: 25px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.dashboard-intro h3 {
+    color: var(--highlight-color);
+    font-size: 26px;
+}
+
+/* Add Property Form */
+.form-card {
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+}
+
+.form-card h3 {
+    font-size: 24px;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-card input,
+.form-card textarea,
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: #fff;
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+.form-card textarea {
+    resize: none;
+}
+
+.form-card button {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-card button:hover {
+    background: var(--primary-light);
+}
+
+/* Property List */
+.property-list h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: var(--highlight-color);
+}
+
+/* Property Card */
+.property-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: var(--radius);
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.property-card h4 {
+    font-size: 22px;
+    color: var(--primary-light);
+}
+
+/* Images */
+.property-images {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.property-images img {
+    width: 130px;
+    height: 95px;
+    border-radius: 10px;
+    border: 2px solid #d0d0d0;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.property-images img:hover {
+    transform: scale(1.12);
+}
+
+/* Edit/Delete Buttons */
+.btn-edit,
+.btn-delete {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-edit {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: var(--primary-light);
+}
+
+.btn-delete {
+    background: var(--danger-color);
+    color: #fff;
+}
+
+.btn-delete:hover {
+    background: #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body { padding: 10px; }
+
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

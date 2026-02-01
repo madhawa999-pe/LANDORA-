@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 850px;
+    height: 470px;
+    display: flex;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #f9f9f9;  
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+}
+
+.signin-box {
+    width: 50%;
+    background: #ffffff;  
+    padding: 50px;
+}
+
+.signin-box h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.social-icons i {
+   font-size: 20px;
+   margin-right: 12px;
+   cursor: pointer;
+}
+
+.signin-box p {
+    font-size: 14px;
+    margin: 15px 0 10px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.forgot {
+    font-size: 13px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #666;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 15px;
+    background: transparent;
+    border: 1px solid #8ac45b;
+    color: #5fa33a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #8BC34A;
+    color: white;
+}
+
+.signup-panel {
+    width: 50%;
+    background: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 80px 40px;
+}
+
+.signup-panel h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.signup-panel p {
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* SIGN UP Button on right */
+.btn-outline {
+    padding: 12px 30px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: #8BC34A;
+    color: #fff;
+}

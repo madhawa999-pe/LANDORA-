@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #245E55;      
+    --secondary-color: #6FAF9F;    
+    --accent-color: #D8B45A;      
+    --bg-color: #FFFFFF;           
+    --card-bg-color: #F5F7F6;     
+    --text-color: #1F2D2A;         
+    --highlight-color: #245E55;    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+.container {
+    width: 850px;
+    height: 500px;
+    display: flex;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--card-bg-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.left-box {
+    width: 50%;
+    background: var(--bg-color);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-box h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: var(--highlight-color);
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.input-group i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background: var(--highlight-color);
+    border-color: var(--highlight-color);
+}
+
+.small-text {
+    text-align: center;
+    margin: 20px 0 10px;
+    color: #777;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons i {
+    font-size: 22px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--highlight-color);
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+/* ---- RIGHT BOX (Welcome Panel) ---- */
+.right-box {
+    width: 50%;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    text-align: center;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-box h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.right-box p {
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-login {
+    padding: 12px 35px;
+    border: 2px solid var(--bg-color);
+    background: transparent;
+    color: var(--bg-color);
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+}

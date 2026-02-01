@@ -1,0 +1,213 @@
+:root {
+    --primary-color: #245E55;      
+    --secondary-color: #6FAF9F;   
+    --accent-color: #D8B45A;       
+    --bg-color: #FFFFFF;          
+    --card-bg-color: #F5F7F6;      
+    --text-color: #1F2D2A;         
+    --highlight-color: #245E55;    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding-bottom: 40px;
+}
+
+.topbar {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.topbar button {
+    background: #E53935; 
+    border: none;
+    padding: 8px 18px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.topbar button:hover {
+    background: #c62828;
+}
+h3 {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 26px;
+    color: var(--highlight-color);
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 380px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 15px;
+}
+
+.search-box input:focus {
+    border-color: var(--secondary-color);
+}
+
+.search-box button {
+    background: var(--secondary-color);
+    border: none;
+    padding: 12px 22px;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.search-box button:hover {
+    background: var(--primary-color);
+}
+
+.property-list {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.property-card {
+    background: var(--card-bg-color);
+    border-radius: 16px; 
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(36, 94, 85, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0; 
+}
+
+/* Hover effect */
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(36, 94, 85, 0.25);
+}
+
+/* IMAGE */
+.property-images img {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover;
+    border-bottom: 2px solid #d0d0d0;
+    transition: transform 0.3s ease;
+}
+
+.property-images img:hover {
+    transform: scale(1.05); 
+}
+
+/* CONTENT */
+.property-card h4 {
+    padding: 15px 15px 5px;
+    font-size: 20px;
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+.property-card p {
+    padding: 0 15px 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.property-card b {
+    color: #111;
+}
+
+.property-card .tag {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin: 10px 0 0 15px;
+}
+
+/* CONTACT BUTTON */
+.btn-contact {
+    margin: 15px;
+    margin-top: auto;
+    background: var(--secondary-color);
+    border: none;
+    padding: 12px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    width: calc(100% - 30px);
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-contact:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+
+.property-card .price {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-top: 1px solid #ddd;
+    background: linear-gradient(90deg, rgba(245,247,246,0.3), rgba(245,247,246,0));
+}
+
+/* EMPTY MESSAGE */
+.property-list p {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+
+    .topbar {
+        padding: 15px 20px;
+    }
+}

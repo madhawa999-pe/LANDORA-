@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+:root {
+    --primary-color: #245E55;
+    --secondary-color: #6FAF9F;
+    --bg-color: #FFFFFF;
+    --card-bg: #F5F7F6;
+    --text-color: #1F2D2A;
+    --hover-color: #1f4d45;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.back-button {
+    padding: 20px;
+}
+
+.back-button button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.back-button button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.about-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(36,94,85,0.6), rgba(36,94,85,0.6)), url("images/Land.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 60px;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.mission-vision,
+.team {
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.mission,
+.vision,
+.member {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover,
+.vision:hover,
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team {
+    background: var(--bg-color);
+    padding: 80px 20px;
+}
+
+.team h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+.team-members {
+    display: flex;
+    gap: 30px;
+    justify-content: center;   
+    flex-wrap: nowrap;         
+    align-items: stretch;      
+    margin: 0 auto;            
+}
+.team-members {
+    display: flex;
+    gap: 30px;
+    justify-content: center;   
+    flex-wrap: nowrap;         
+    align-items: stretch;     
+    margin: 0 auto;            
+}
+
+.member {
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 0 0 calc(33.33% - 20px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Member image */
+.member img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.member img:hover {
+    transform: scale(1.05);
+}
+
+/* Member text */
+.member h3 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+
+.member p {
+    margin-top: 5px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+@media (max-width: 900px) {
+    .team-members {
+        flex-wrap: wrap;       
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .member {
+        flex: 1 1 90%;        
+        max-width: 350px;
+    }
+}
+
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
